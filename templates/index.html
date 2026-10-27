@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}CropSense AI | Crop health insights{% endblock %}
+{% block content %}
+<section class="landing-hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES, MEET MACHINE LEARNING</p>
+    <h1>A closer look at<br><em>crop health.</em></h1>
+    <p class="hero-lede">Inspect leaf images, keep a record of observations, and explore practical crop-health guidance in one focused workspace.</p>
+    <div class="d-flex flex-wrap gap-3 align-items-center mt-4"><a class="btn btn-forest btn-lg" href="{{ url_for('register') }}">Get started <i class="bi bi-arrow-up-right ms-2"></i></a><a class="text-link" href="{{ url_for('login') }}">I already have an account <i class="bi bi-arrow-right"></i></a></div>
+    <div class="hero-footnote"><i class="bi bi-shield-check"></i><span>Model results are estimates, not a professional diagnosis.</span></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Close-up of a healthy green leaf in a field">
+    <div class="art-caption"><span class="caption-dot"></span> OBSERVE / RECORD / LEARN</div>
+    <div class="hero-note"><span class="note-kicker">FIELD OBSERVATION 01</span><strong>Leaf detail<br>is the starting point.</strong><span>AI-assisted screening</span></div>
+  </div>
+</section>
+<section class="landing-strip"><div><span class="strip-index">01</span><strong>One clear image</strong><span>Start with a well-lit leaf photo.</span></div><div><span class="strip-index">02</span><strong>Useful context</strong><span>Review confidence and alternatives.</span></div><div><span class="strip-index">03</span><strong>Your own record</strong><span>Keep private scans together.</span></div></section>
+{% endblock %}

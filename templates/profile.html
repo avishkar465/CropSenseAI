@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Profile | CropSense AI{% endblock %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">ACCOUNT SETTINGS</p><h1>Your profile.</h1><p class="text-secondary">Manage the name shown in your field notebook.</p></div></section>
+<section class="panel profile-panel"><div class="profile-icon"><i class="bi bi-person"></i></div><div class="profile-details"><span class="section-kicker">ACCOUNT DETAILS</span><form method="post" class="mt-3"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label class="form-label" for="username">Display name</label><input class="form-control mb-3" id="username" name="username" maxlength="40" minlength="3" required value="{{ user.username }}"><label class="form-label" for="email">Email address</label><input class="form-control mb-4" id="email" value="{{ user.email }}" disabled><button class="btn btn-forest" type="submit">Save changes</button></form><p class="profile-meta">Account created {{ user.created_at or 'date unavailable' }}</p></div></section>
+{% endblock %}
